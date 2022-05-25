@@ -4,7 +4,7 @@ GO API with all the CRUD operations
 
 Prerequisites
 get mux package i.e go get 	"github.com/gorilla/mux".
-This needs to be done inside the project folder.Also command will work only where go is installed .i.e you need to create the project onside go>src
+This needs to be done inside the project folder.Also command will work only where go is installed .i.e you need to create the project inside go>src
 
 STRUCTS
 - can hold different data types 
