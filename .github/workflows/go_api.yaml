@@ -20,8 +20,8 @@ jobs:
         go version
         go get -u golang.org/x/lint/golint
         go get -u github.com/gorilla/mux
+    - uses: actions/checkout@v2      
     - name: Run Build
-      uses: actions/checkout@v2  
       run: go build .
     - name: Run Build
       run: go build .
