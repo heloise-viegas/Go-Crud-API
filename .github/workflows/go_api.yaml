@@ -21,6 +21,7 @@ jobs:
         go get -u golang.org/x/lint/golint
         go get -u github.com/gorilla/mux
     - name: Run Build
+      uses: actions/checkout@v2  
       run: go build .
     - name: Run Build
       run: go build .
