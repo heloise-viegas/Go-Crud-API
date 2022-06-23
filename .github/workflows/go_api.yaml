@@ -3,7 +3,7 @@ on:
   push:
     branches: 
     - main
-   pull_request:
+  pull_request:
     branches:
     - main
 jobs:
@@ -22,7 +22,8 @@ jobs:
     - name: Run Build
       run: go build .
     - name: Run Build
-      run: go build .      
+      run: go build .
+      
       
       
       
