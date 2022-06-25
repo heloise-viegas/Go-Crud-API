@@ -22,9 +22,10 @@ jobs:
         go get -u github.com/gorilla/mux    
     - name: Run Build
       run: go build .
-    - name: Run Build
-      run: go build .
-
+    - name: Run Linter
+      run: |
+        go vet .
+        golint .
       
       
       
