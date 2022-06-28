@@ -31,13 +31,13 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-    - name: Step to add manual approval
-      uses: trstringer/manual-approval@v1
-      with:
-        secret: ${{ github.TOKEN }}
-        approvers: heloise-viegas
-        minimum-approvals: 1
-        issue-title: "Check code before deployment"      
+   # - name: Step to add manual approval
+    #  uses: trstringer/manual-approval@v1
+     # with:
+      #  secret: ${{ github.TOKEN }}
+       # approvers: heloise-viegas
+       # minimum-approvals: 1
+       # issue-title: "Check code before deployment"      
     - name: Step to build docker image
       run: docker build . --file Dockerfile --tag go-image-crud-api
 
