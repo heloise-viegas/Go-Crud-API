@@ -38,6 +38,8 @@ jobs:
         approvers: heloise-viegas
         minimum-approvals: 1
         issue-title: "Check code before deployment"      
+    - name: Step to build docker image
+      run: docker build . --file Dockerfile --tag go-image-crud-api
 
 
       
