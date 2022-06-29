@@ -1,9 +1,10 @@
 FROM golang:1.18
 WORKDIR /app
-RUN go mod init
-COPY go.mod ./
-COPY go.sum ./
+COPY go.* ./
 RUN go mod download
-COPY . .
-RUN go build main.go
-CMD ["/app"]
+
+# Copy local code to the container image.
+COPY . ./
+
+# Build the binary.
+RUN go build -v -o server
