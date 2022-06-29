@@ -1,6 +1,6 @@
 FROM golang:1.18
 WORKDIR /app
-#RUN go mod init
+RUN go mod init
 #COPY go.mod ./
 COPY go.mod go.sum ./
 RUN go mod download
