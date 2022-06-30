@@ -6,6 +6,7 @@ RUN go mod init github.com/heloise-viegas/Go-Crud-API
 #COPY go.mod go.sum ./
 #RUN go mod download
 RUN go mod tidy
+RUN go get github.com/gorilla/mux
 COPY . ./
 RUN go build main.go
 EXPOSE 8080
