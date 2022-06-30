@@ -1,6 +1,6 @@
 FROM golang:1.18
 WORKDIR /app
-#RUN go mod init github.com/heloise-viegas/Go-Crud-API
+RUN go mod init github.com/heloise-viegas/Go-Crud-API   # gives this error if not used :- go: go.mod file not found in current directory or any parent directory.
 #F\Go\Go\src\go\Go-Crud-API
 #COPY go.mod ./
 #COPY go.mod go.sum ./
