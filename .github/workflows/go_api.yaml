@@ -40,6 +40,15 @@ jobs:
        # issue-title: "Check code before deployment"      
     - name: Step to build docker image
       run: docker build . --file Dockerfile --tag go-image-crud-api
+    - name: Build & push Docker image
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: heloise28/go_crud_api_image
+        tags: latest
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
 
 
       
